@@ -13,5 +13,5 @@ Very simple _AND HARDCODED_ weather app made with the Electron framework
 #:~ npm install
 #:~ npm run start
 </code></pre>
-Create your own "token.json" file and input your [openweathermap.org] API key there
+Create your own "token.json" file and input your [OpenWeather](openweathermap.org) API key there
 
