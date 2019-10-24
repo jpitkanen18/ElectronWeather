@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "sfPro";
+  src: url("sfPro.otf");
+}
+p {
+  color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 10px;
+  letter-spacing: 1px;
+  word-break: break-word;
+}
+h1 {
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  padding: 15px 15px 15px 15px;
+  max-width: fit-content;
+  letter-spacing: 10px;
+  font-weight: lighter;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  color: black;
+}
+body {
+  font-family: sans-serif;
+}
+.container {
+  margin-left: 65px;
+  color: white;
+}
+html {
+  background: black;
+  font-family: "sfPro";
+}
+.city {
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+.temp {
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+div.col-3 {
+  display: inline-flex;
+  width: 100%;
+}
+.row {
+  padding: 15px;
+  width: 33%;
+}
+.titlebar {
+  width: 100vw;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}

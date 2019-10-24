@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ElectronWeather</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <link rel="stylesheet" type="text/css" href="muikee.css" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'"
+    />
+    <script src="jquery.min.js"></script>
+  </head>
+  <div class="titlebar"></div>
+  <body>
+    <main>
+      <h1>Electron<br />Weather</h1>
+      <div class="container">
+        <div class="col-3">
+          <div class="row">
+            <h3 class="city">
+              Weather in Espoo
+            </h3>
+            <h2 class="temp" id="temp">--</h2>
+          </div>
+          <div class="row">
+            <h3 class="city">
+              Weather in Tallinn
+            </h3>
+            <h2 class="temp" id="temp2">--</h2>
+          </div>
+          <div class="row">
+            <h3 class="city">
+              Weather in Miami
+            </h3>
+            <h2 class="temp" id="temp3">--</h2>
+          </div>
+        </div>
+      </div>
+      <p>Copyright © 2019 jpitkanen18. All rights reserved.</p>
+    </main>
+  </body>
+  <script>
+    function meme(city, id) {
+      var req = new XMLHttpRequest();
+      req.open(
+        "GET",
+        "http://localhost:6969/city=" + city + "&fullData=false",
+        true
+      );
+      req.onload = function() {
+        var data = this.response;
+        var temp = JSON.parse(data);
+        document.getElementById(id).innerHTML = temp.temperature;
+        console.log("did it");
+      };
+      req.send();
+    }
+    meme("Espoo", "temp");
+    meme("Tallinn", "temp2");
+    meme("Miami", "temp3");
+  </script>
+</html>
